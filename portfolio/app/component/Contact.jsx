@@ -35,14 +35,14 @@ const Contact = () => {
 
   return <>
     <div className='flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 space-x-0 md:space-x-10 py-3 z-40'>
-      <div className='md:w-1/2 text-white'>
+      <div className='w-full md:w-1/2 text-white'>
         <IconCloudDemo />
       </div>
       <form ref={form} className='space-y-7 px-5 w-full md:w-1/2' onSubmit={sendEmail}>
-        <input className='border border-blue-900 rounded-xl px-5 py-4 w-full text-white' name='to_name' type='text' placeholder='Full Name' />
-        <input className='border border-blue-900 rounded-xl px-5 py-4 w-full text-white' name='from_name' type='email' placeholder='email' />
-        <textarea placeholder='message' className='w-full border px-5 py-3 md:h-[200px] rounded-xl' name='message' />
-        <button type='submit' className='px-5 w-full md:w-[100px] py-3 transition-all duration-300 text-white dark:text-white border bg-blue-600 text-[1rem] rounded-xl'>SUBMIT</button>
+        <input className='border dark:border-white border-black rounded-xl px-5 text-black py-4 w-full dark:bg-black dark:text-white' name='to_name' type='text' placeholder='Full Name' />
+        <input className='border dark:border-white border-black rounded-xl px-5 text-black py-4 w-full dark:bg-black dark:text-white' name='from_name' type='email' placeholder='email' />
+        <textarea placeholder='message' className='w-full border dark:border-white border-black px-5 dark:bg-black py-3 h-[200px] rounded-xl' name='message' />
+        <button type='submit' className='px-5 w-full md:w-[100px] py-3 transition-all duration-300 dark:text-white bg-blue-600 dark:text-white text-black border dark:border-white border-black text-[1rem] rounded-xl'>SUBMIT</button>
       </form>
     </div>
   </>

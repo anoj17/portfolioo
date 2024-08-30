@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   return <>
-    <div className='flex flex-col md:flex-row px-7 md:px-0 justify-center items-center space-y-10 md:space-y-0 space-x-0 md:space-x-5 lg:space-x-10 py-3 z-40'>
+    <div className='flex flex-col md:flex-row md:px-0 justify-center items-center space-y-10 md:space-y-0 space-x-0 md:space-x-5 lg:space-x-10 py-3 z-40'>
       <div className='w-full text-white'>
         <IconCloudDemo />
       </div>

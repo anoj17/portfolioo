@@ -19,7 +19,6 @@ interface iappPop {
     setPopup: any
 }
 
-
 const HomePage = ({ popup, setPopup }: iappPop) => {
 
     const [scroll, setScroll] = useState(false)
@@ -36,7 +35,7 @@ const HomePage = ({ popup, setPopup }: iappPop) => {
     };
     return (
         <div className={`flex flex-col h-[89vh] z-40 scroll-y-auto scrollbar-hide ${scroll ? 'overflow-y-scroll' : 'overflow-hidden '}`}>
-            <div className="z-10 w-full flex flex-col lg:pl-44 md:pl28 pr-10 md:pr-0 items-center justify-center">
+            <div className="z-10 w-full flex flex-col lg:pl-44 md:pl-28 pr-5 md:pr-0 items-center justify-center">
                 <div className="z-10 w-full flex items-center justify-between font-mono">
                     <div className=' items-center pl-7 md:pl-0 mt-16 px-auto justify-center'>
                         <div className='flex flex-col-reverse md:flex-row mx-auto z-10 md:pt-20 lg:pt-0 w-full items-center justify-center'>
@@ -46,7 +45,7 @@ const HomePage = ({ popup, setPopup }: iappPop) => {
                                     <h1 className="text-2xl md:text-3xl flex flex-wrap lg:text-5xl">I'm Anoj Budathoki</h1>
                                     <h1 className="text-2xl md:text-3xl lg:text-5xl">Frontend Developer</h1>
                                 </div>
-                                <div className="flex jsutify-center items-center space-x-14 md:space-x-0">
+                                <div className="flex jsutify-center items-center space-x-10 md:space-x-0">
                                     <div className="flex jsutify-center w-[140px] md:mt-10 md:w-auto items-center">
                                         <Button item='About me' className='hover:ml-1 transition-all ease-in-out' clickPopup={clickPop} />
                                         <FaArrowRightLong size={20} className='text-black dark:text-gray-300 -ml-1' />

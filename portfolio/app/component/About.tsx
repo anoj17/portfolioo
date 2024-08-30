@@ -37,7 +37,7 @@ const About = ({ popup, setPopup }: iappProp) => {
   return (
     <>
       {popup && (
-        <div className=' w-full absolute transition-all duration-300 py-5 md:py-14 ease-in-out bg-white/80 dark:bg-black/80 flex justify-center items-center z-40 text-white'>
+        <div className=' w-full absolute transition-all duration-300 py-5 md:py-14 ease-in-out bg-white/80 dark:bg-black/80 flex justify-center items-center z-50 text-white'>
           <div className='bg-white shadow drop:shadow-md dark:bg-black text-black dark:text-white flex flex-col w-full h-full md:w-[95%] lg:w-[70%] px-8 lg:px-8 md:px-16 py-7'>
             <div className='flex justify-between items-center md:pr-20'>
             <h1 className='text-black dark:text-white my-3 text-2xl'>About Me</h1>
@@ -51,7 +51,7 @@ const About = ({ popup, setPopup }: iappProp) => {
                   I am constantly exploring new technologies and honing my skills. My journey in software development is driven by curiosity,
                   creativity, and a commitment to building innovative solutions. Technologies and tools that I used to build websites.
                 </p>
-                <div className='flex py-2 flex-wrap gap-4 space-x-3'>
+                <div className='flex py-2 flex-wrap md:gap-4 gap-3'>
                   <Tools items='#html'/>
                   <Tools items='#css'/>
                   <Tools items='#javascript'/>
@@ -67,11 +67,11 @@ const About = ({ popup, setPopup }: iappProp) => {
                 </div>
                 <div className='flex flex-col space-y-4 py-7'>
                   <h1 className='text-blue-600 font-semibold text-xl'>MERN STACK</h1>
-                  <div className='flex py-3 lg:space-x-14 md:space-x-10 space-x-6'>
+                  <div className='flex py-3 pr-10 md:pr-0 lg:space-x-14 md:space-x-10 space-x-2'>
                     <div className='relative'>
                       <DiMongodb
                         size={90}
-                        className='text-green-700'
+                        className='text-green-700 -ml-8 md:ml-0'
                         onMouseEnter={() => setHoveredIcon('MongoDB')}
                         onMouseLeave={() => setHoveredIcon(null)}
                       />

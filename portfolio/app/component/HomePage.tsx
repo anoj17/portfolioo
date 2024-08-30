@@ -37,7 +37,7 @@ const HomePage = ({ popup, setPopup }: iappPop) => {
         <div className={`flex flex-col h-[89vh] z-40 scroll-y-auto scrollbar-hide ${scroll ? 'overflow-y-scroll' : 'overflow-hidden '}`}>
             <div className="z-10 w-full flex flex-col lg:pl-44 md:pl-28 pr-8 md:pr-0 items-center justify-center">
                 <div className="z-10 w-full flex items-center justify-between font-mono">
-                    <div className=' items-center pl-7 md:pl-0 mt-16 px-auto justify-center'>
+                    <div className=' items-center pl-4 md:pl-0 mt-16 px-auto justify-center'>
                         <div className='flex flex-col-reverse md:flex-row mx-auto z-10 md:pt-20 lg:pt-0 w-full items-center justify-center'>
                             <div className='flex flex-col space-y-7 md:space-y-0 w-full'>
                                 <div className='flex flex-col space-y-3 text-black dark:text-white'>
@@ -60,7 +60,7 @@ const HomePage = ({ popup, setPopup }: iappPop) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className=' flex justify-left items-left'>
+                            <div className=' flex justify-left items-left -ml-5 md:ml-0'>
                                 <svg className="h-auto w-[280px] lg:h-[500px] md:w-[350px] lg:w-[650px]" viewBox="0 0 406 368" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M314.899 203.5L314.899 349.43L162.5 209.053M314.899 203.5L283.037 203.586M314.899 203.5L337.881 203.586L381 171.109L314.899 171.109M162.5 209.053L118.044 170.96L157.5 171.109M162.5 209.053L65.5 301.465L20.5595 301.465L137.482 189.156M200.5 171.109L283.037 96.5L283.037 171.109M200.5 171.109L283.037 171.109M200.5 171.109L157.5 171.109M283.037 203.586L210.846 203.123L283.037 271.086L283.037 203.586ZM283.037 171.109L314.899 171.109M157.5 171.109L316.135 20.4322L314.899 171.109" stroke="#3675eb" strokeOpacity="1" strokeWidth="16" />
                                     <path d="M314.899 203.5L314.899 349.43L162.5 209.053M314.899 203.5L283.037 203.586M314.899 203.5L337.881 203.586L381 171.109L314.899 171.109M162.5 209.053L118.044 170.96L157.5 171.109M162.5 209.053L65.5 301.465L20.5595 301.465L137.482 189.156M200.5 171.109L283.037 96.5L283.037 171.109M200.5 171.109L283.037 171.109M200.5 171.109L157.5 171.109M283.037 203.586L210.846 203.123L283.037 271.086L283.037 203.586ZM283.037 171.109L314.899 171.109M157.5 171.109L316.135 20.4322L314.899 171.109" stroke="url(#paint0_linear)" strokeWidth="16" />

@@ -34,14 +34,14 @@ const Contact = () => {
   };
 
   return <>
-    <div className='flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 space-x-0 md:space-x-10 py-3 z-40'>
-      <div className='w-full md:w-1/2 text-white'>
+    <div className='flex flex-col md:flex-row px-7 md:px-0 justify-center items-center space-y-10 md:space-y-0 space-x-0 md:space-x-5 lg:space-x-10 py-3 z-40'>
+      <div className='w-full text-white'>
         <IconCloudDemo />
       </div>
-      <form ref={form} className='space-y-7 px-5 w-full md:w-1/2' onSubmit={sendEmail}>
-        <input className='border dark:border-white border-black rounded-xl px-5 text-black py-4 w-full dark:bg-black dark:text-white' name='to_name' type='text' placeholder='Full Name' />
-        <input className='border dark:border-white border-black rounded-xl px-5 text-black py-4 w-full dark:bg-black dark:text-white' name='from_name' type='email' placeholder='email' />
-        <textarea placeholder='message' className='w-full border dark:border-white border-black px-5 dark:bg-black py-3 h-[200px] rounded-xl' name='message' />
+      <form ref={form} className='space-y-7 px-5 w-full' onSubmit={sendEmail}>
+        <input className='border dark:border-white border-black rounded-xl dark:bg-black bg-white px-5 text-black py-4 w-full dark:bg-black dark:text-white' name='to_name' type='text' placeholder='Full Name' />
+        <input className='border dark:border-white border-black rounded-xl dark:bg-black bg-white px-5 text-black py-4 w-full dark:bg-black dark:text-white' name='from_name' type='email' placeholder='email' />
+        <textarea placeholder='message' className='w-full border dark:border-white border-black px-5 dark:bg-black py-3 h-[200px] rounded-xl dark:bg-black bg-white' name='message' />
         <button type='submit' className='px-5 w-full md:w-[100px] py-3 transition-all duration-300 dark:text-white bg-blue-600 dark:text-white text-black border dark:border-white border-black text-[1rem] rounded-xl'>SUBMIT</button>
       </form>
     </div>

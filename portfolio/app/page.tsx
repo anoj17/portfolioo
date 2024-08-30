@@ -17,7 +17,7 @@ export default function Home() {
     {
       dark ? <ParticleBackground /> : <ParticleWhiteBackground />
     }
-    <main className="flex flex-col lg:pl-44 px-5 md:pl-28 md:pr-6 lg:pr-20 z-40">
+    <main className="flex flex-col md:pr-6 lg:pr-20 z-40">
       <NavBar dark={dark} setDark={setDark} />
       <HomePage popup={popup} setPopup={setPopup}/>
     </main>

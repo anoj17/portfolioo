@@ -64,7 +64,7 @@ const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] md:w-[70rem] overflow-y-auto scrollbar-hide flex justify-between md:px-20 relative space-x-10 rounded-md p-10"
+      className="h-[30rem] md:w-[70rem] overflow-y-auto scrollbar-hide flex justify-between md:px-44 lg:px-20 relative lg:space-x-10 rounded-md lg:p-10"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
@@ -89,19 +89,19 @@ const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg max-w-sm mt-10"
+                className="text-kg max-w-sm mt-6"
               >
                 {item.description}
               </motion.p>
             </div>
           ))}
-          <div className="h-40" />
+          <div className="lg:h-40 md:h-28" />
         </div>
       </div>
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "hidden lg:block rounded-md bg-white sticky top-5 overflow-hidden",
+          "block rounded-md bg-white sticky top-5 overflow-hidden",
           contentClassName
         )}
       >

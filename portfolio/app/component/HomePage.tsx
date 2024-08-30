@@ -36,7 +36,7 @@ const HomePage = ({ popup, setPopup }: iappPop) => {
     };
     return (
         <div className={`flex flex-col h-[89vh] z-40 scroll-y-auto scrollbar-hide ${scroll ? 'overflow-y-scroll' : 'overflow-hidden '}`}>
-            <div className="z-10 w-full flex flex-col items-center justify-center">
+            <div className="z-10 w-full flex flex-col lg:pl-44 md:pl28 pr-10 md:pr-0 items-center justify-center">
                 <div className="z-10 w-full flex items-center justify-between font-mono">
                     <div className=' items-center pl-7 md:pl-0 mt-16 px-auto justify-center'>
                         <div className='flex flex-col-reverse md:flex-row mx-auto z-10 md:pt-20 lg:pt-0 w-full items-center justify-center'>
@@ -90,7 +90,7 @@ const HomePage = ({ popup, setPopup }: iappPop) => {
                         </Links>
                     </div>
                 </div>
-                <div className='md:flex flex-col justify-center items-center hidden mt-8'>
+                <div className='md:flex flex-col justify-center items-center hidden mt-6'>
                     {/* <Link
                         activeClass="active"
                         to="project"
@@ -112,8 +112,8 @@ const HomePage = ({ popup, setPopup }: iappPop) => {
             <div className='flex flex-col text-white py-20' ref={projectRef}>
                 <Project />
             </div>
-            <div className='flex flex-col py-20 space-y-10'>
-                <h1 className='text-center text-black dark:text-white uppercase font-semibold text-3xl py-3'>Get In Touch</h1>
+            <div className='flex flex-col py-10 space-y-5'>
+                <h1 className='text-center text-black dark:text-white uppercase font-semibold text-3xl'>Get In Touch</h1>
                 <Contact />
             </div>
 

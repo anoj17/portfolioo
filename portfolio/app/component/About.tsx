@@ -46,7 +46,7 @@ const About = ({ popup, setPopup }: iappProp) => {
           <div className='flex flex-col md:flex-row py-6'>
             <div className='flex flex-col w-full md:w-2/3'>
               <div className='flex flex-col space-y-5'>
-                <p className='text-[1rem] font-mono'>
+                <p className='text-[1rem] font-mono items-center'>
                   I am Anoj Budathoki, a passionate Software Engineering student at Nepal College of Information Technology.
                   I am constantly exploring new technologies and honing my skills. My journey in software development is driven by curiosity,
                   creativity, and a commitment to building innovative solutions. Technologies and tools that I used to build websites.
@@ -67,17 +67,17 @@ const About = ({ popup, setPopup }: iappProp) => {
                 </div>
                 <div className='flex flex-col space-y-4 py-7'>
                   <h1 className='text-blue-600 font-semibold text-xl'>MERN STACK</h1>
-                  <div className='flex py-3 pr-10 md:pr-0 lg:space-x-14 md:space-x-10 space-x-2'>
+                  <div className='flex py-3 pr-10 md:pr-0 lg:space-x-14 md:gap-10 gap-2'>
                     <div className='relative'>
                       <DiMongodb
                         size={90}
-                        className='text-green-700 -ml-8 md:ml-0'
+                        className='text-green-700 -ml-10 md:ml-0'
                         onMouseEnter={() => setHoveredIcon('MongoDB')}
                         onMouseLeave={() => setHoveredIcon(null)}
                       />
                       {hoveredIcon === 'MongoDB' && <Title title='MongoDB' />}
                     </div>
-                    <div className='relative'>
+                    <div className='relative md:ml-0 -ml-4'>
                       <SiExpress
                         size={90}
                         onMouseEnter={() => setHoveredIcon('Express.js')}

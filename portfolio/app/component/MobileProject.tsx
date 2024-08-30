@@ -8,7 +8,7 @@ import todo from '../assets/todo.png'
 
 const MobileProject = () => {
     return (
-        <div className='w-full px-3 z-10 py-10 flex  dark:text-white text-black flex-col md:hidden'>
+        <div className='w-full px-4 z-10 py-10 flex  dark:text-white text-black flex-col md:hidden'>
             <div className='w-full py-10 flex flex-col space-y-10'>
                 <PinContainer
                     title='Food Store'

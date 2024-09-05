@@ -23,7 +23,7 @@ const content = [
           containerClassName=''
         >
           <div className='px-5 space-y-3'>
-            <p className='font-semibold uppercase font-mono text-xl'>Food Store</p>
+            <p className='font-semibold uppercase font-mono text-xl'>Weather App</p>
             <Image src={weather} alt="Project Image" className='h-[200px] w-[300px] rounded-xl' />
           </div>
         </PinContainer>
@@ -63,7 +63,7 @@ const content = [
           containerClassName=''
         >
           <div className='px-5 space-y-3'>
-            <p className='font-semibold uppercase font-mono text-xl'>Food Store</p>
+            <p className='font-semibold uppercase font-mono text-xl'>Dummy Website</p>
             <Image src={defi} alt="Project Image" className='h-[200px] w-[300px] rounded-xl' />
           </div>
         </PinContainer>
@@ -83,7 +83,7 @@ const content = [
           containerClassName=''
         >
           <div className='px-5 space-y-3'>
-            <p className='font-semibold uppercase font-mono text-xl'>Food Store</p>
+            <p className='font-semibold uppercase font-mono text-xl'>Todo list</p>
             <Image src={todo} alt="Project Image" className='h-[200px] w-[300px] rounded-xl' />
           </div>
         </PinContainer>

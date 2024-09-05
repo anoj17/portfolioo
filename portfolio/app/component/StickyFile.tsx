@@ -9,44 +9,45 @@ import defi from '../assets/defi.png'
 import todo from '../assets/todo.png'
 
 const content = [
-  {
-    title: "Food Store",
-    description:
-      "Food store is an e-commerce website built using Next.js and Tailwind CSS for the frontend, Node.js and Express.js for the backend, and MongoDB for the database. The platform allows users to add products and purchase multiple items.",
-    content: (
-        <div className='h-full w-full'>
-        <PinContainer
-            title='Food Store'
-            href='https://food-delivery-frontend-alpha.vercel.app/'
-            className='w-[350px] h-[280px] flex justify-center items-center flex-col'
-            containerClassName=''
-        >
-            <div className='px-5 space-y-3'>
-                <p className='font-semibold uppercase font-mono text-xl'>Food Store</p>
-                <Image src={foodStore} alt="Project Image" className='h-[200px] w-[300px] rounded-xl' />
-            </div>
-        </PinContainer>
-    </div>
-    ),
-  },
+
   {
     title: "Weather App",
     description:
       "The Weather App is a website that provides weather conditions for any location. It is built using React.js and Tailwind CSS, and it includes a weather API to fetch the data. The website also features a search functionality to look up weather information by place. ",
     content: (
-        <div className='h-full w-full'>
+      <div className='h-full w-full'>
         <PinContainer
-            title='Weather App'
-            href='https://weather-app-4a7q.vercel.app/'
-            className='w-[350px] h-[280px] flex justify-center items-center flex-col'
-            containerClassName=''
+          title='Weather App'
+          href='https://weather-app-4a7q.vercel.app/'
+          className='w-[350px] h-[280px] flex justify-center items-center flex-col'
+          containerClassName=''
         >
-            <div className='px-5 space-y-3'>
-                <p className='font-semibold uppercase font-mono text-xl'>Food Store</p>
-                <Image src={weather} alt="Project Image" className='h-[200px] w-[300px] rounded-xl' />
-            </div>
+          <div className='px-5 space-y-3'>
+            <p className='font-semibold uppercase font-mono text-xl'>Food Store</p>
+            <Image src={weather} alt="Project Image" className='h-[200px] w-[300px] rounded-xl' />
+          </div>
         </PinContainer>
-    </div>
+      </div>
+    ),
+  },
+  {
+    title: "Food Store",
+    description:
+      "Food store is an e-commerce website built using Next.js and Tailwind CSS for the frontend, Node.js and Express.js for the backend, and MongoDB for the database. The platform allows users to add products and purchase multiple items.",
+    content: (
+      <div className='h-full w-full'>
+        <PinContainer
+          title='Food Store'
+          href='https://food-delivery-frontend-alpha.vercel.app/'
+          className='w-[350px] h-[280px] flex justify-center items-center flex-col'
+          containerClassName=''
+        >
+          <div className='px-5 space-y-3'>
+            <p className='font-semibold uppercase font-mono text-xl'>Food Store</p>
+            <Image src={foodStore} alt="Project Image" className='h-[200px] w-[300px] rounded-xl' />
+          </div>
+        </PinContainer>
+      </div>
     ),
   },
   {
@@ -55,18 +56,18 @@ const content = [
       "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     content: (
       <div className='h-full w-full'>
-      <PinContainer
+        <PinContainer
           title='Weather App'
           href='https://defi-web-app.vercel.app/'
           className='w-[350px] h-[280px] flex justify-center items-center flex-col'
           containerClassName=''
-      >
+        >
           <div className='px-5 space-y-3'>
-              <p className='font-semibold uppercase font-mono text-xl'>Food Store</p>
-              <Image src={defi} alt="Project Image" className='h-[200px] w-[300px] rounded-xl' />
+            <p className='font-semibold uppercase font-mono text-xl'>Food Store</p>
+            <Image src={defi} alt="Project Image" className='h-[200px] w-[300px] rounded-xl' />
           </div>
-      </PinContainer>
-  </div>
+        </PinContainer>
+      </div>
     ),
   },
   {
@@ -75,18 +76,18 @@ const content = [
       "It is a to-do list where you can add, delete, and update tasks. The application is made using pure HTML, CSS, and JavaScript, ensuring a lightweight and fast experience. The interface is user-friendly, allowing for easy task management. Whether you're organizing daily chores or long-term projects, this to-do list helps you stay on track.",
     content: (
       <div className='h-full w-full'>
-      <PinContainer
+        <PinContainer
           title='Todo List'
           href='https://to-do-list-gules-pi.vercel.app/'
           className='w-[350px] h-[280px] flex justify-center items-center flex-col'
           containerClassName=''
-      >
+        >
           <div className='px-5 space-y-3'>
-              <p className='font-semibold uppercase font-mono text-xl'>Food Store</p>
-              <Image src={todo} alt="Project Image" className='h-[200px] w-[300px] rounded-xl' />
+            <p className='font-semibold uppercase font-mono text-xl'>Food Store</p>
+            <Image src={todo} alt="Project Image" className='h-[200px] w-[300px] rounded-xl' />
           </div>
-      </PinContainer>
-  </div>
+        </PinContainer>
+      </div>
     ),
   },
 ];

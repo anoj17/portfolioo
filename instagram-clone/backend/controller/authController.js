@@ -1,7 +1,8 @@
-// import generateToken from '../config/generateToken.js'
 import dotenv from 'dotenv'
 import { v2 as cloudinary } from 'cloudinary';
 import User from '../model/userModel.js'
+import bcryptjs from 'bcryptjs'
+import {generateToken} from '../middleware/jwtToken.js'
 
 dotenv.config()
 
@@ -12,11 +13,10 @@ cloudinary.config({
 });
 
 export const userRegister = async (req, res) => {
-    const { fname, lname, password, email, profile } = req.body
-    console.log(req.body)
+    const { fname, lname, password, email, profile } = req.body?.data
+    // console.log(req.body)
 
     try {
-        console.log(fname, lname)
         if (!fname || !lname || !password || !email) {
             return res.status(400).json({ message: "please fill the input field", alert: false })
         }
@@ -28,17 +28,18 @@ export const userRegister = async (req, res) => {
         if (existUser) {
             return res.status(400).json({ message: "user already exist!", alert: false })
         }
+        console.log(fname, lname)
 
         let profileUrl = '';
         if (profile) {
             const uploadRes = await cloudinary.uploader.upload(profile, {
                 upload_preset: "image_preset",
-                folder: "chat",
+                folder: "images",
             });
-            profileUrl = uploadRes.url;
-        }
+            profileUrl = uploadRes.url
+            console.log(uploadRes)
 
-        // console.log(profileUrl)
+        }
 
         const user = new User({
             fname,
@@ -47,22 +48,13 @@ export const userRegister = async (req, res) => {
             email,
             password: hashPassword,
         })
-        // console.log(user)
-
-        generateToken(user._id, res)
-
-        const data = {
-            fname: user.fname,
-            lname: user.lname,
-            id: user._id,
-            email: user.email,
-            profile: user.profile,
-        }
-
+        // console.log(token)
+         
         await user.save()
-        return res.status(201).json({ message: "user successfully registered!", alert: true, data })
+        return res.status(201).json({ message: "user successfully registered!", alert: true })
 
     } catch (error) {
+        console.log("Error during register", error)
         return res.status(400).json({ message: "something went wrong when registered!", error, alert: false })
     }
 }
@@ -77,7 +69,13 @@ export const loginUser = async (req, res) => {
         const comparePassword = bcryptjs.compareSync(password, user?.password)
         console.log(comparePassword)
 
-        generateToken(user._id, res)
+        const payload = {
+            id: user._id,
+            email: user.email 
+        }
+
+        const token = generateToken(payload)
+        console.log(token)
 
         if (user) {
             if (comparePassword) {
@@ -87,7 +85,7 @@ export const loginUser = async (req, res) => {
                     id: user._id,
                     email: user.email,
                     profile: user.profile,
-                    // token: generateToken(user._id)
+                    token: token
                 }
                 return res.status(201).json({ message: "user login successfully", alert: true, data })
             }
@@ -100,6 +98,6 @@ export const loginUser = async (req, res) => {
         }
     } catch (error) {
         console.log(error)
-        return res.status(400).json({ message: "error while login user",error, alert: false })
+        return res.status(400).json({ message: "error while login user", error, alert: false })
     }
 }

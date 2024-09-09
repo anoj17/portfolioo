@@ -1,8 +1,8 @@
 import axios from "axios"
 
-const URL = "http://localhost:8000"
+const URL = process.env.NEXT_PUBLIC_URL
 
-export const signIn = async (data) => {
+export const signUp = async (data) => {
     try {
         console.log(data)
         return await axios.post(`${URL}/api/user/signup`, data,)
@@ -29,5 +29,14 @@ export const login = async (data) => {
 
     } catch (error) {
         console.log("backend error", error)
+    }
+}
+
+export const allUsers = async () => {
+    try{
+        return await axios.get(`${URL}/api/user/alluser`)
+    }
+    catch(error){
+        console.log(error)
     }
 }

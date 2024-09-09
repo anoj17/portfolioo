@@ -1,17 +1,15 @@
+'use client'
+import Link from "next/link"
 import { useState } from "react"
 import { useMutation } from "react-query"
+import { signUp } from "../api/api"
 import toast from "react-hot-toast"
-import { useDispatch } from "react-redux"
-import { Link } from "react-router-dom"
-import { PageRoute } from "../enum/routes.enum"
-import { signIn } from "../api/api"
-import { signInRedux } from "../redux/authSlice"
+import { useRouter } from 'next/navigation';
 
-const Signup = () => {
+const page = () => {
 
-    // const router = useRouter()
+    const router = useRouter()
 
-    const dispatch = useDispatch()
 
     const [data, setData] = useState({
         fname: "",
@@ -20,14 +18,9 @@ const Signup = () => {
         password: "",
     })
 
-    const { mutate } = useMutation(['login'], signIn, {
+    const { mutate } = useMutation(['signup'], signUp, {
         onSuccess: res => {
-            toast(res?.data.message)
-            if (res?.data.alert) {
-                // router.push("/")
-                dispatch(signInRedux(res?.data))
-                // console.log(res.data)
-            }
+            toast(res?.data.message) 
         },
         onError: error => {
             console.log(error)
@@ -36,20 +29,20 @@ const Signup = () => {
 
     const [profile, setProfile] = useState('')
 
-    const handleChange = (e) => {
+    const handleChange = (e: any) => {
         const { name, value } = e.target;
         setData({ ...data, [name]: value })
         // console.log(data)
     }
 
-    const clickImage = (e) => {
+    const clickImage = (e: any) => {
         const reader = new FileReader()
         reader.readAsDataURL(e.target.files[0])
     
         reader.onload = () => {
-          const result = reader.result
+          const result = reader.result as string
           setProfile(result)
-          setData((prev) => {
+          setData((prev: any) => {
             return {
               ...prev,
               profile: result
@@ -58,13 +51,13 @@ const Signup = () => {
         }
       }
 
-    const submitData = (e) => {
+    const submitData = (e: any) => {
    const {fname, lname, password, email} = data
         // if(!fname || !lname || !password || email){
         //     toast("please fill all input field")
         // }
         e.preventDefault()
-        console.log(data, profile)
+        // console.log(data, profile)
         mutate({data, profile})
     }
 
@@ -123,10 +116,10 @@ const Signup = () => {
                 </div>
 
                 <button className='text-white bg-blue-600 text-center w-full py-2 rounded-md' type="submit">SignUp</button>
-                <h1 className="text-center">Already have an account?<Link to={PageRoute.LOGIN} className='text-blue-800 font-bold cursor-pointer'>Login</Link></h1>
+                <h1 className="text-center">Already have an account?<Link href='/' className='text-blue-800 font-bold cursor-pointer'>Login</Link></h1>
             </form>
         </main>
     )
 }
 
-export default Signup
+export default page

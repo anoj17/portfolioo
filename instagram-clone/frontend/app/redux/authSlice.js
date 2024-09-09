@@ -5,6 +5,7 @@ const initialState = {
     isAuthentication: false,
     access_token: null,
     user: null,
+    allUser: []
 }
 
 export const authSlice = createSlice({
@@ -13,13 +14,19 @@ export const authSlice = createSlice({
 
     reducers: {
         signInRedux: (state, action) => {
-            // console.log(action.payload)
+            console.log(action.payload)
             state.user= action.payload
             state.isAuthentication = true
-            // state.access_token = action.payload.
+            state.access_token = action.payload
         },
+
+        allUserRedux: (state, action) => {
+            // console.log(action.payload)
+           state.allUser = action.payload
+        //    state.access_token = action.payload.t
+        }
     }
 })
 
-export const {signInRedux } = authSlice.actions
+export const {signInRedux, allUserRedux} = authSlice.actions
 export default authSlice.reducer
